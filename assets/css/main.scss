@@ -1,87 +1,160 @@
-
-
-@charset "utf-8";
+---
+---
+/*
+ * This file controls what is imported from /_sass
+ *
+ * Note that the files are processed in the order they are imported, so they are partly
+   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ */
+@import
+"vendor/breakpoint/breakpoint",
+"themes",
+"theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
+"theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+"include/mixins",
+"vendor/susy/susy",
+"layout/reset",
+"layout/base",
+"include/utilities",
+"layout/tables",
+"layout/buttons",
+"layout/notices",
+"layout/masthead",
+"layout/navigation",
+"layout/footer",
+"syntax",
+"layout/forms",
+"layout/page",
+"layout/archive",
+"layout/sidebar",
+"layout/json_cv",
+"vendor/font-awesome/fontawesome",
+"vendor/font-awesome/solid",
+"vendor/font-awesome/brands"
+;
 
 /* ==========================================================================
    COULEURS PERSONNALISÉES — INSPIRATION ASSAS
    ========================================================================== */
 
-// Palette
-$assas-red:         #9D1B1F;   // rouge Assas (titres, accents)
-$assas-red-dark:    #7A1418;   // hover plus sombre
-$assas-red-light:   #C44B4F;   // variante claire
-$assas-navy:        #1A2C4E;   // bleu marine complémentaire
-$assas-grey:        #3A3A3A;   // texte courant
+$assas-red:         #9D1B1F;
+$assas-red-dark:    #7A1418;
+$assas-red-light:   #C44B4F;
+$assas-navy:        #1A2C4E;
+$assas-grey:        #3A3A3A;
 
-// Override des variables du thème Minimal Mistakes
-$primary-color:        $assas-red;
-$link-color:           $assas-red;
-$link-color-hover:     $assas-red-dark;
-$link-color-visited:   $assas-red-dark;
-$masthead-link-color:  $assas-red;
-$masthead-link-color-hover: $assas-red-dark;
-$navicon-link-color-hover: $assas-red;
-$border-color:         $assas-red-light;
-
-@import "main";
-
-/* ==========================================================================
-   AJUSTEMENTS SUPPLÉMENTAIRES
-   ========================================================================== */
-
-// Barre supérieure (logo + navigation)
+/* Barre supérieure */
 .masthead {
   border-bottom: 3px solid $assas-red;
 }
 
-// Titres de section
-h1, h2, h3 {
-  color: $assas-navy;
-}
+.greedy-nav {
+  background: #ffffff;
 
-// Barre sous les h2
-h2 {
-  border-bottom: 2px solid $assas-red;
-  padding-bottom: 0.3em;
-}
+  .visible-links a {
+    color: $assas-navy;
 
-// Liens dans le contenu principal
-.page__content a {
-  color: $assas-red;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
-  
-  &:hover {
-    border-bottom-color: $assas-red;
+    &:before {
+      background: $assas-red;
+    }
+
+    &:hover {
+      color: $assas-red;
+    }
+  }
+
+  a.site-title {
+    color: $assas-red;
+    font-weight: 700;
+
+    &:hover {
+      color: $assas-red-dark;
+    }
   }
 }
 
-// Nom dans la sidebar
+/* Titres */
+.page__content {
+  h1, h2, h3, h4 {
+    color: $assas-navy;
+  }
+
+  h2 {
+    border-bottom: 2px solid $assas-red;
+    padding-bottom: 0.3em;
+    margin-top: 1.5em;
+  }
+
+  h3 {
+    color: $assas-red;
+  }
+
+  /* Liens dans le contenu */
+  a {
+    color: $assas-red;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      color: $assas-red-dark;
+      border-bottom-color: $assas-red;
+    }
+  }
+}
+
+/* Titre de la page (ex: "About", "CV") */
+.page__title {
+  color: $assas-navy;
+  border-bottom: 3px solid $assas-red;
+  padding-bottom: 0.5em;
+}
+
+/* Sidebar — nom de l'auteur */
 .author__name {
   color: $assas-navy;
 }
 
-// Bio dans la sidebar
 .author__bio {
   color: $assas-grey;
 }
 
-// Boutons (ex: bouton "Follow")
-.btn--primary,
-.btn--inverse {
-  background-color: $assas-red;
-  
-  &:hover {
-    background-color: $assas-red-dark;
+/* Sidebar — liens (email, scholar, github...) */
+.author__urls {
+  li a {
+    color: $assas-navy;
+    transition: color 0.2s ease;
+
+    i {
+      color: $assas-red;
+    }
+
+    &:hover {
+      color: $assas-red;
+    }
   }
 }
 
-// Listes urls de la sidebar (location, employer, email...)
-.author__urls a {
-  color: $assas-navy;
-  
+/* Boutons */
+.btn--primary,
+.btn--inverse,
+.btn--info {
+  background-color: $assas-red !important;
+  border-color: $assas-red !important;
+
   &:hover {
-    color: $assas-red;
+    background-color: $assas-red-dark !important;
+    border-color: $assas-red-dark !important;
   }
+}
+
+/* Pied de page */
+.page__footer {
+  border-top: 3px solid $assas-red;
+}
+
+/* Sélections de texte */
+::selection {
+  background: $assas-red;
+  color: #ffffff;
 }
