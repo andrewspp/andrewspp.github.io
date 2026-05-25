@@ -1,55 +1,58 @@
 ---
+# Front matter Jekyll - les --- sont obligatoires
 ---
-/*
- * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
- */
+
 @import
-"vendor/breakpoint/breakpoint",
-"themes",
-"theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
-"theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
-"include/mixins",
-"vendor/susy/susy",
-"layout/reset",
-"layout/base",
-"include/utilities",
-"layout/tables",
-"layout/buttons",
-"layout/notices",
-"layout/masthead",
-"layout/navigation",
-"layout/footer",
-"syntax",
-"layout/forms",
-"layout/page",
-"layout/archive",
-"layout/sidebar",
-"layout/json_cv",
-"vendor/font-awesome/fontawesome",
-"vendor/font-awesome/solid",
-"vendor/font-awesome/brands"
-;
+  "vendor/breakpoint/breakpoint",
+  "themes",
+  "theme/default_light",
+  "theme/default_dark",
+  "include/mixins",
+  "vendor/susy/susy",
+  "layout/reset",
+  "layout/base",
+  "include/utilities",
+  "layout/tables",
+  "layout/buttons",
+  "layout/notices",
+  "layout/masthead",
+  "layout/navigation",
+  "layout/footer",
+  "syntax",
+  "layout/forms",
+  "layout/page",
+  "layout/archive",
+  "layout/sidebar",
+  "layout/json_cv",
+  "vendor/font-awesome/fontawesome",
+  "vendor/font-awesome/solid",
+  "vendor/font-awesome/brands";
 
-/* ==========================================================================
-   COULEURS PERSONNALISÉES — INSPIRATION ASSAS
-   ========================================================================== */
+// ==========================================================================
+// COULEURS PERSONNALISEES - ASSAS
+// ==========================================================================
 
-$assas-red:         #9D1B1F;
-$assas-red-dark:    #7A1418;
-$assas-red-light:   #C44B4F;
-$assas-navy:        #1A2C4E;
-$assas-grey:        #3A3A3A;
+$assas-red: #9D1B1F;
+$assas-red-dark: #7A1418;
+$assas-navy: #1A2C4E;
+$assas-grey: #3A3A3A;
 
-/* Barre supérieure */
+// Barre superieure
 .masthead {
   border-bottom: 3px solid $assas-red;
 }
 
 .greedy-nav {
   background: #ffffff;
+
+  a.site-title {
+    color: $assas-red;
+    font-weight: 700;
+
+    &:hover {
+      color: $assas-red-dark;
+    }
+  }
 
   .visible-links a {
     color: $assas-navy;
@@ -62,18 +65,9 @@ $assas-grey:        #3A3A3A;
       color: $assas-red;
     }
   }
-
-  a.site-title {
-    color: $assas-red;
-    font-weight: 700;
-
-    &:hover {
-      color: $assas-red-dark;
-    }
-  }
 }
 
-/* Titres */
+// Titres dans le contenu
 .page__content {
   h1, h2, h3, h4 {
     color: $assas-navy;
@@ -89,7 +83,6 @@ $assas-grey:        #3A3A3A;
     color: $assas-red;
   }
 
-  /* Liens dans le contenu */
   a {
     color: $assas-red;
     text-decoration: none;
@@ -103,14 +96,14 @@ $assas-grey:        #3A3A3A;
   }
 }
 
-/* Titre de la page (ex: "About", "CV") */
+// Titre de la page
 .page__title {
   color: $assas-navy;
   border-bottom: 3px solid $assas-red;
   padding-bottom: 0.5em;
 }
 
-/* Sidebar — nom de l'auteur */
+// Sidebar - nom auteur
 .author__name {
   color: $assas-navy;
 }
@@ -119,7 +112,7 @@ $assas-grey:        #3A3A3A;
   color: $assas-grey;
 }
 
-/* Sidebar — liens (email, scholar, github...) */
+// Sidebar - liens
 .author__urls {
   li a {
     color: $assas-navy;
@@ -135,7 +128,7 @@ $assas-grey:        #3A3A3A;
   }
 }
 
-/* Boutons */
+// Boutons
 .btn--primary,
 .btn--inverse,
 .btn--info {
@@ -148,12 +141,12 @@ $assas-grey:        #3A3A3A;
   }
 }
 
-/* Pied de page */
+// Pied de page
 .page__footer {
   border-top: 3px solid $assas-red;
 }
 
-/* Sélections de texte */
+// Selection de texte
 ::selection {
   background: $assas-red;
   color: #ffffff;
