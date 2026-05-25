@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Je suis doctorant en économie à l'[Université Panthéon-Assas (Paris II)](https://www.u-paris2.fr/), au sein du [LEMMA](https://lemma.u-paris2.fr/). Mes recherches s'articulent autour de l'organisation des entreprises, du marché du travail et des dynamiques de désindustrialisation. J'exploite notamment des données non structurées comme la base administrative des accords d'entreprise.
+Je suis doctorant en économie à l'[Université Panthéon-Assas (Paris II)](https://www.u-paris2.fr/), au sein du [LEMMA](https://lemma.u-paris2.fr/), sous la direction de [Paul Maarek](https://sites.google.com/site/paulmaarek/). Mes recherches s'articulent autour de l'organisation des entreprises, du marché du travail et des dynamiques de désindustrialisation. J'exploite notamment des données non structurées comme la base administrative des accords d'entreprise.
 
 ## Thèmes de recherche
 
@@ -18,7 +18,7 @@ Je suis doctorant en économie à l'[Université Panthéon-Assas (Paris II)](htt
 
 ## Actualités
 
-Je suis actuellement en cours de rédaction de ma thèse. N'hésitez pas à me contacter pour toute question ou collaboration.
+Je présenterai mon travail sur le télétravail et la restructuration des entreprises au **LAGV 2026** (Aix-Marseille), à la **Royal Economic Society 2026** et à la conférence **AIEL 2026** (Rome).
 
 ## Contact
 
