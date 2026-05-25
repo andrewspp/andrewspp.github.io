@@ -4,6 +4,7 @@ title_separator          : "-"
 name                     : &name "Pierre Andrews"
 description              : &description "Site personnel de Pierre Andrews, doctorant en économie à l'Université Panthéon-Assas."
 url                      : "https://andrewspp.github.io"
+site_theme              : "default_light"
 baseurl                  : ""
 repository               : "andrewspp/andrewspp.github.io"
 
